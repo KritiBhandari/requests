@@ -1,11 +1,24 @@
-import os
-from distutils.sysconfig import get_python_lib
+#!/usr/bin/env python
+import commands
+package = 'git'
 
-path = '/usr/bin/python'
+def query_package(package):
+    status = commands.getstatusoutput("git --version " + package)
+    if not status[0]:
+        print(status[1]) # package is installed
+        print "Proceed"
+    else:
+        print "Build fail"
 
-if os.path.exists(path):
-	print "Git installed"
-else:
-	print "Git not installed"
+    status = commands.getstatusoutput("python --version " + package)
+    if not status[0]:
+        print(status[1]) # package is installed
+        print "Proceed"
+    else:
+        print "Build fail"
 
-print os.path.dirname('py')
+def main():
+	query_package(package)
+
+if __name__ == '__main__':
+	main()
