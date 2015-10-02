@@ -1,1 +1,1 @@
-"Test for master"
+"Test for master_success"
