@@ -1,9 +1,11 @@
 import os
+from distutils.sysconfig import get_python_lib
 
 path = '/usr/bin/python'
 
 if os.path.exists(path):
 	print "Git installed"
+else:
+	print "Git not installed"
 
-#for f in sys.path:
-#	print "package successfully installed in : %s" % f
+print os.path.dirname('py')
