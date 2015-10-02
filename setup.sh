@@ -5,3 +5,4 @@ sudo apt-get update
 sudo apt-get install -y jenkins
 sudo service jenkins start
 sudo apt-get install git
+sudo apt-get -y install python-pip
