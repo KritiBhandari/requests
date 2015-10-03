@@ -1,4 +1,4 @@
 #!/bin/bash
 
 python unit_test.py
-echo "dev job done!"
+echo "dev job done!!"
